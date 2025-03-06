@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Labrador Retriever",
+    "price": 1500,
+    "description": "O Labrador Retriever é conhecido por sua inteligência, lealdade e natureza amigável. É uma das raças mais populares no Brasil.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2021/01/Labrador-Retriever-3.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.9
+  },
+  {
+    "name": "Bulldog Francês",
+    "price": 2000,
+    "description": "O Bulldog Francês é um cão pequeno com uma personalidade encantadora e é ótimo para a vida em apartamento.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2021/01/bulldog-1.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.8
+  },
+  {
+    "name": "Poodle",
+    "price": 1800,
+    "description": "O Poodle é uma raça inteligente e versátil, conhecida por sua pelagem hipoalergênica e facilidade de treinamento.",
+    "image": "https://quintadapatada.com/wp-content/uploads/2022/08/cachorros-pequeno-porte-poodle.jpg",
+    "qualification": "Qualidade",
+    "rating": 4.7
+  },
+  {
+    "name": "Beagle",
+    "price": 1200,
+    "description": "O Beagle é um cão alegre e curioso, com um excelente faro e uma natureza amigável.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2020/12/beagle.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.6
+  },
+  {
+    "name": "Chihuahua",
+    "price": 1000,
+    "description": "O Chihuahua é a menor raça de cachorro, mas possui uma personalidade corajosa e é extremamente leal ao seu dono.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2021/01/chihuahua-5.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.5
+  },
+  {
+    "name": "Labrador Retriever",
+    "price": 1500,
+    "description": "O Labrador Retriever é conhecido por sua inteligência, lealdade e natureza amigável. É uma das raças mais populares no Brasil.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2021/01/Labrador-Retriever-3.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.9
+  },
+  {
+    "name": "Bulldog Francês",
+    "price": 2000,
+    "description": "O Bulldog Francês é um cão pequeno com uma personalidade encantadora e é ótimo para a vida em apartamento.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2021/01/bulldog-1.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.8
+  },
+  {
+    "name": "Poodle",
+    "price": 1800,
+    "description": "O Poodle é uma raça inteligente e versátil, conhecida por sua pelagem hipoalergênica e facilidade de treinamento.",
+    "image": "https://quintadapatada.com/wp-content/uploads/2022/08/cachorros-pequeno-porte-poodle.jpg",
+    "qualification": "Qualidade",
+    "rating": 4.7
+  },
+  {
+    "name": "Beagle",
+    "price": 1200,
+    "description": "O Beagle é um cão alegre e curioso, com um excelente faro e uma natureza amigável.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2020/12/beagle.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.6
+  },
+  {
+    "name": "Chihuahua",
+    "price": 1000,
+    "description": "O Chihuahua é a menor raça de cachorro, mas possui uma personalidade corajosa e é extremamente leal ao seu dono.",
+    "image": "https://www.caonosso.pt/wp-content/uploads/2021/01/chihuahua-5.jpg.webp",
+    "qualification": "Qualidade",
+    "rating": 4.5
+  }
+]

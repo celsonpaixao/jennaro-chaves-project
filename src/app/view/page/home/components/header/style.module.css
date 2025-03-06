@@ -1,0 +1,186 @@
+.container {
+  /* background-color: var(--color-astronaut-blue-50); */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 39px;
+  margin: 0 15vw;
+}
+
+.tab {
+  font-size: 16px;
+  color: var(--color-astronaut-blue-black);
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.tab:hover {
+  border-bottom: 1px solid var(--color-astronaut-blue-700);
+  color: var(--color-astronaut-blue-700);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 1px solid var(--color-astronaut-blue-700);
+  padding: 15px 20px;
+  border-radius: 30px;
+}
+.playButton {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border: none;
+  background-color: rgba(57, 153, 191, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.playButton div {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(57, 153, 191, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playButton:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.bodyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.bodyInfoTitle {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--color-astronaut-blue-950);
+}
+
+.highlightDog {
+  color: var(--color-astronaut-blue-700);
+  font-weight: bold;
+}
+
+.arrow {
+  width: 135px;
+  position: absolute;
+  top: 11rem;
+  right: 62%;
+  z-index: 4;
+}
+
+.highlightLife {
+  color: var(--color-astronaut-blue-700);
+  font-weight: bold;
+}
+
+.bodyDescription {
+  font-size: 20px;
+  color: gray;
+}
+
+.imageContainer {
+  position: relative;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.polygon {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  z-index: 1;
+  width: 300px;
+}
+
+.ellipse {
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  z-index: 1;
+  width: 300px;
+}
+
+.bodyimage {
+  position: relative;
+  z-index: 4;
+  width: 530px;
+  height: 675px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(https://www.metroworldnews.com.br/resizer/v2/XYIQ3C7WM5CIPJBYWRZHRZCJWM.png?auth=a85b468f19b3956bf8699a977b1161d5bc0ffad652b75e003ba3630f340935cc&width=1200&height=1200&smart=true);
+  border-radius: 16px;
+}
+
+.bodyInfoButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bodyInfoButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.bodyInfoButtontitle {
+  color: var(--color-astronaut-blue-700);
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.bodyInfoButtondescription {
+  font-size: 16px;
+  color: var(--color-astronaut-blue-black);
+}
+
+.bodyInfoButtonContainer:not(:last-child) {
+  border-right: 2px solid #ccc;
+}
