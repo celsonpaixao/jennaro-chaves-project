@@ -1,4 +1,5 @@
 import TouchOfHappiness from "./components/ touchoOfhappiness";
+import Faqs from "./components/faqs";
 import ForYou from "./components/foryou ";
 import Header from "./components/header";
 import MoreShoped from "./components/moreshopped";
@@ -18,6 +19,8 @@ const Home = () => {
       <div className={style.toadopt}>
         <Toadopt />
       </div>
+
+      <Faqs/>
     </div>
   );
 };

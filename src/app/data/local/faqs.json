@@ -1,0 +1,44 @@
+{
+  "faqs": [
+    {
+      "question": "Quais serviços o pet shop oferece?",
+      "answer": "Oferecemos banho e tosa, consultas veterinárias, vacinação, hotel para pets, adestramento e uma loja completa com produtos para seu pet."
+    },
+    {
+      "question": "Preciso agendar um horário para banho e tosa?",
+      "answer": "Sim, recomendamos o agendamento prévio para garantir um horário disponível para o seu pet."
+    },
+    {
+      "question": "Quais formas de pagamento são aceitas?",
+      "answer": "Aceitamos cartões de crédito e débito, Pix, dinheiro e pagamentos via carteira digital."
+    },
+    {
+      "question": "Vocês oferecem atendimento veterinário de emergência?",
+      "answer": "Sim, temos um veterinário disponível para emergências. Recomendamos entrar em contato antes de trazer seu pet para garantir o atendimento imediato."
+    },
+    {
+      "question": "Os produtos vendidos na loja são de qualidade?",
+      "answer": "Sim, trabalhamos apenas com marcas renomadas e produtos testados para garantir a saúde e o bem-estar do seu pet."
+    },
+    {
+      "question": "Vocês oferecem serviço de entrega?",
+      "answer": "Sim, temos serviço de delivery para ração, acessórios e outros produtos. Consulte a disponibilidade na sua região."
+    },
+    {
+      "question": "O pet shop tem hotel para pets?",
+      "answer": "Sim, oferecemos hospedagem para cães e gatos, garantindo conforto e segurança para o seu pet enquanto você viaja."
+    },
+    {
+      "question": "Vocês realizam castração de pets?",
+      "answer": "Sim, realizamos castração com acompanhamento veterinário. Entre em contato para mais informações e agendamento."
+    },
+    {
+      "question": "É possível contratar um plano de cuidados para meu pet?",
+      "answer": "Sim, temos planos mensais e anuais que incluem banho, tosa, consultas veterinárias e descontos em produtos."
+    },
+    {
+      "question": "O pet shop atende quais tipos de animais?",
+      "answer": "Atendemos cães e gatos, além de outros animais de pequeno porte. Entre em contato para mais informações sobre atendimento a pets exóticos."
+    }
+  ]
+}
