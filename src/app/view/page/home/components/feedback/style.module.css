@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  padding: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: #000;
+  display: flex;
+}
+
+.controls {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  z-index: 10;
+}
+
+.navButton {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navButton.left {
+  left: 0;
+}
+
+.navButton.right {
+  right: 0;
+}
+
+.body {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}

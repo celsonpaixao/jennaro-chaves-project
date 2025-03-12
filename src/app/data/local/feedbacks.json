@@ -1,0 +1,32 @@
+[
+  {
+    "userImage": "https://example.com/images/user1.jpg",
+    "userName": "Ana Carolina",
+    "comment": "Excelente atendimento! Meu cachorro foi muito bem cuidado. Recomendo demais!",
+    "rating": 5
+  },
+  {
+    "userImage": "https://example.com/images/user2.jpg",
+    "userName": "João Pedro",
+    "comment": "Equipe super atenciosa e cuidadosa com os animais. Levo meu gato lá há anos.",
+    "rating": 4
+  },
+  {
+    "userImage": "https://example.com/images/user3.jpg",
+    "userName": "Mariana Silva",
+    "comment": "Ambiente limpo, profissionais qualificados. Me senti segura em deixar minha cadelinha aqui.",
+    "rating": 5
+  },
+  {
+    "userImage": "https://example.com/images/user4.jpg",
+    "userName": "Carlos Mendes",
+    "comment": "Gostei bastante do atendimento, mas tive que esperar um pouco para ser atendido.",
+    "rating": 4
+  },
+  {
+    "userImage": "https://example.com/images/user5.jpg",
+    "userName": "Fernanda Lima",
+    "comment": "Clínica maravilhosa! Salvaram a vida do meu gatinho. Gratidão eterna!",
+    "rating": 5
+  }
+]

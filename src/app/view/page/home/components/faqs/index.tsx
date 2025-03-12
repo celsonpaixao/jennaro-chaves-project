@@ -14,7 +14,7 @@ const Faqs = () => {
   return (
     <div className={style.container}>
       <div className={style.containerHeader}>
-        <SectionTitle title="FAQ´s" fontSize="36px" />
+        <SectionTitle title="FAQ´s" fontSize="36px" lineWidth={300}  />
         <p>
           Temos o prazer em responder algumas das perguntas mais frequentes. Se
           <br />

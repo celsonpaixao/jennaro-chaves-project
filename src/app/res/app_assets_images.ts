@@ -19,7 +19,9 @@ class AppAssetsImages {
     static readonly line3: string = 'src/assets/Line 3.svg';
     static readonly person_image_2: string = 'src/assets/person image 2.svg';
     static readonly pata1: string = 'src/assets/pata 1.svg';
-
+    static readonly image9: string = 'src/assets/image 9.svg';
+    static readonly demarquerdown: string = 'src/assets/demarquer down.svg';
+    static readonly demarquerup: string = 'src/assets/demarquer up.svg';
 }
 
 export default AppAssetsImages;

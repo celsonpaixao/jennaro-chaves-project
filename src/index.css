@@ -52,3 +52,41 @@
   font-weight: 700;
   gap: 10px;
 }
+
+.prima-astronaut-button-image-2 {
+  background: #e39a41;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 16px 26px;
+  border-radius: 8px;
+  max-width: 200px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  gap: 10px;
+}
+
+.form-input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.3rem;
+  background-color: #eeeeee75;
+  color: #9c9898;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #9c9898;
+    font-size: 1rem;
+  }
+  input:focus {
+    border-color: #ccc;
+  }
+}

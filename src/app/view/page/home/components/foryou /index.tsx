@@ -32,7 +32,7 @@ const ForYou = () => {
         <img src={AppAssetsImages.arrow5} alt="Próximo" />
       </button>
 
-      {/* Indicadores de Página */}
+
       <div className={style.pagination}>
         {dogsData.map((_, index) => (
           <span

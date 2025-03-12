@@ -1,0 +1,48 @@
+.container {
+  margin-top: 15rem;
+  /* background: #02486b; */
+  background: linear-gradient(-20deg, #f7931e 50%, #003b5c 50%);
+  width: 1250px;
+  height: 500px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: row;
+}
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.body_image {
+  width: 476;
+  height: 624;
+  margin-top: -125px;
+}
+
+.body_title {
+  font-weight: 800;
+  font-size: 49px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color: white;
+}
+.body_title span {
+  color: #e39a41;
+}
+
+.body_info_text1 {
+  color: #e39a41;
+}
+
+.body_info {
+  width: 700px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 20px;
+}
