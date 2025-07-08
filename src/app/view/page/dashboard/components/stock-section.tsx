@@ -7,7 +7,7 @@ const StockSection = () => {
       nome: "Ração Premium Cães",
       categoria: "Alimentação",
       quantidade: 50,
-      preco: "R$ 89,90",
+      preco: "Kz$ 89,90",
       status: "Em Estoque",
     },
     {
@@ -15,7 +15,7 @@ const StockSection = () => {
       nome: "Coleira Antipulgas",
       categoria: "Acessórios",
       quantidade: 5,
-      preco: "R$ 25,00",
+      preco: "Kz$ 25,00",
       status: "Estoque Baixo",
     },
     {
@@ -23,7 +23,7 @@ const StockSection = () => {
       nome: "Brinquedo Mordedor",
       categoria: "Brinquedos",
       quantidade: 0,
-      preco: "R$ 15,90",
+      preco: "Kz$ 15,90",
       status: "Sem Estoque",
     },
   ]

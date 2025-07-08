@@ -1,8 +1,9 @@
-export const API_CONFIG = {
-  baseUrl: "http://localhost:3333", 
-  timeout: 10000, 
-  endpoints: {
-    dogs: "/dogs/list" 
-  }
-};
+import { baseUrl } from "../../res/app_constants";
 
+export const API_CONFIG = {
+  baseUrl: baseUrl,
+  timeout: 10000,
+  endpoints: {
+    dogs: "/dogs/list",
+  },
+};

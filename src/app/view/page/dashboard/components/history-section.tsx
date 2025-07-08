@@ -1,4 +1,4 @@
-import style from "../style.module.css"
+import style from "../style.module.css";
 
 const HistorySection = () => {
   const history = [
@@ -17,7 +17,7 @@ const HistorySection = () => {
       animal: "Mimi",
       tipo: "Compra",
       data: "14/01/2024",
-      valor: "R$ 800,00",
+      valor: "Kz$ 800,00",
       status: "Concluído",
     },
     {
@@ -35,10 +35,10 @@ const HistorySection = () => {
       animal: "Luna",
       tipo: "Compra",
       data: "12/01/2024",
-      valor: "R$ 1.200,00",
+      valor: "Kz$ 1.200,00",
       status: "Concluído",
     },
-  ]
+  ];
 
   return (
     <div className={style.section}>
@@ -65,7 +65,11 @@ const HistorySection = () => {
       </div>
 
       <div className={style.searchBar}>
-        <input type="text" placeholder="Buscar por cliente ou animal..." className={style.searchInput} />
+        <input
+          type="text"
+          placeholder="Buscar por cliente ou animal..."
+          className={style.searchInput}
+        />
         <select className={style.filterSelect}>
           <option value="">Todos os Tipos</option>
           <option value="adocao">Adoção</option>
@@ -93,7 +97,11 @@ const HistorySection = () => {
               <td className={style.tableCell}>{item.animal}</td>
               <td className={style.tableCell}>
                 <span
-                  className={`${style.statusBadge} ${item.tipo === "Adoção" ? style.statusAdopted : style.statusSold}`}
+                  className={`${style.statusBadge} ${
+                    item.tipo === "Adoção"
+                      ? style.statusAdopted
+                      : style.statusSold
+                  }`}
                 >
                   {item.tipo}
                 </span>
@@ -101,18 +109,28 @@ const HistorySection = () => {
               <td className={style.tableCell}>{item.data}</td>
               <td className={style.tableCell}>{item.valor}</td>
               <td className={style.tableCell}>
-                <span className={`${style.statusBadge} ${style.statusAvailable}`}>{item.status}</span>
+                <span
+                  className={`${style.statusBadge} ${style.statusAvailable}`}
+                >
+                  {item.status}
+                </span>
               </td>
               <td className={style.tableCell}>
-                <button className={`${style.actionButton} ${style.editButton}`}>👁️</button>
-                <button className={`${style.actionButton} ${style.deleteButton}`}>📄</button>
+                <button className={`${style.actionButton} ${style.editButton}`}>
+                  👁️
+                </button>
+                <button
+                  className={`${style.actionButton} ${style.deleteButton}`}
+                >
+                  📄
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-export default HistorySection
+export default HistorySection;

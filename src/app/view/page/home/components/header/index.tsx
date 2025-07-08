@@ -1,6 +1,8 @@
 import style from "./style.module.css";
 import AppAssetsImages from "../../../../../res/app_assets_images";
+import { useAppNavigation } from "../../../../../hooks/useAppNavigation";
 const Header = () => {
+  const { goToRegister } = useAppNavigation();
   return (
     <div className={style.container}>
       <div className={style.navcontainer}>
@@ -38,7 +40,9 @@ const Header = () => {
             lar, mas também uma chance de experimentar o <br /> que é amado,
             cuidado e respeitado.
           </p>
-          <button className="prima-astronaut-button">Criar uma conta</button>
+          <button className="prima-astronaut-button" onClick={goToRegister}>
+            Criar uma conta
+          </button>
           <ul className={style.bodyInfoButton}>
             <div className={style.bodyInfoButtonContainer}>
               <p className={style.bodyInfoButtontitle}>96</p>

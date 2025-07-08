@@ -1,4 +1,4 @@
-import style from "../style.module.css"
+import style from "../style.module.css";
 
 const ReportsSection = () => {
   return (
@@ -7,7 +7,7 @@ const ReportsSection = () => {
 
       <div className={style.statsGrid}>
         <div className={style.statCard}>
-          <div className={style.statNumber}>R$ 15.450</div>
+          <div className={style.statNumber}>Kz$ 15.450</div>
           <div className={style.statLabel}>Vendas do Mês</div>
         </div>
         <div className={style.statCard}>
@@ -25,14 +25,26 @@ const ReportsSection = () => {
       </div>
 
       <div className={style.actionButtons}>
-        <button className={style.primaryButton}>📈 Gerar Relatório Mensal</button>
-        <button className={style.secondaryButton}>📅 Relatório Personalizado</button>
+        <button className={style.primaryButton}>
+          📈 Gerar Relatório Mensal
+        </button>
+        <button className={style.secondaryButton}>
+          📅 Relatório Personalizado
+        </button>
         <button className={style.secondaryButton}>📤 Exportar Dados</button>
       </div>
 
       <div className={style.searchBar}>
-        <input type="date" className={style.searchInput} placeholder="Data Inicial" />
-        <input type="date" className={style.searchInput} placeholder="Data Final" />
+        <input
+          type="date"
+          className={style.searchInput}
+          placeholder="Data Inicial"
+        />
+        <input
+          type="date"
+          className={style.searchInput}
+          placeholder="Data Final"
+        />
         <select className={style.filterSelect}>
           <option value="">Tipo de Relatório</option>
           <option value="vendas">Vendas</option>
@@ -43,10 +55,20 @@ const ReportsSection = () => {
       </div>
 
       <div
-        style={{ background: "#f8f9fa", padding: "2rem", borderRadius: "8px", textAlign: "center", marginTop: "2rem" }}
+        style={{
+          background: "#f8f9fa",
+          padding: "2rem",
+          borderRadius: "8px",
+          textAlign: "center",
+          marginTop: "2rem",
+        }}
       >
-        <h3 style={{ color: "#6c757d", marginBottom: "1rem" }}>📊 Área de Gráficos</h3>
-        <p style={{ color: "#6c757d" }}>Aqui serão exibidos os gráficos e análises dos relatórios selecionados</p>
+        <h3 style={{ color: "#6c757d", marginBottom: "1rem" }}>
+          📊 Área de Gráficos
+        </h3>
+        <p style={{ color: "#6c757d" }}>
+          Aqui serão exibidos os gráficos e análises dos relatórios selecionados
+        </p>
         <div
           style={{
             height: "300px",
@@ -58,11 +80,13 @@ const ReportsSection = () => {
             justifyContent: "center",
           }}
         >
-          <span style={{ color: "#6c757d", fontSize: "1.2rem" }}>Gráfico será renderizado aqui</span>
+          <span style={{ color: "#6c757d", fontSize: "1.2rem" }}>
+            Gráfico será renderizado aqui
+          </span>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ReportsSection
+export default ReportsSection;

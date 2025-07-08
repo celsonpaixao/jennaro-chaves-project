@@ -1,11 +1,11 @@
-import style from "../style.module.css"
+import style from "../style.module.css";
 
 const PaymentsSection = () => {
   const payments = [
     {
       id: 1,
       cliente: "Maria Silva",
-      valor: "R$ 800,00",
+      valor: "Kz$ 800,00",
       metodo: "Cartão de Débito",
       status: "Aprovado",
       data: "15/01/2024",
@@ -13,13 +13,20 @@ const PaymentsSection = () => {
     {
       id: 2,
       cliente: "João Santos",
-      valor: "R$ 150,00",
+      valor: "Kz$ 150,00",
       metodo: "Transferência",
       status: "Pendente",
       data: "14/01/2024",
     },
-    { id: 3, cliente: "Ana Costa", valor: "R$ 0,00", metodo: "Adoção", status: "Concluído", data: "13/01/2024" },
-  ]
+    {
+      id: 3,
+      cliente: "Ana Costa",
+      valor: "Kz$ 0,00",
+      metodo: "Adoção",
+      status: "Concluído",
+      data: "13/01/2024",
+    },
+  ];
 
   return (
     <div className={style.section}>
@@ -27,11 +34,11 @@ const PaymentsSection = () => {
 
       <div className={style.statsGrid}>
         <div className={style.statCard}>
-          <div className={style.statNumber}>R$ 12.350</div>
+          <div className={style.statNumber}>Kz$ 12.350</div>
           <div className={style.statLabel}>Recebido Este Mês</div>
         </div>
         <div className={style.statCard}>
-          <div className={style.statNumber}>R$ 2.100</div>
+          <div className={style.statNumber}>Kz$ 2.100</div>
           <div className={style.statLabel}>Pendente</div>
         </div>
         <div className={style.statCard}>
@@ -42,11 +49,17 @@ const PaymentsSection = () => {
 
       <div className={style.actionButtons}>
         <button className={style.primaryButton}>💰 Registrar Pagamento</button>
-        <button className={style.secondaryButton}>📊 Relatório Financeiro</button>
+        <button className={style.secondaryButton}>
+          📊 Relatório Financeiro
+        </button>
       </div>
 
       <div className={style.searchBar}>
-        <input type="text" placeholder="Buscar por cliente..." className={style.searchInput} />
+        <input
+          type="text"
+          placeholder="Buscar por cliente..."
+          className={style.searchInput}
+        />
         <select className={style.filterSelect}>
           <option value="">Todos os Métodos</option>
           <option value="debito">Cartão de Débito</option>
@@ -85,8 +98,8 @@ const PaymentsSection = () => {
                     payment.status === "Aprovado"
                       ? style.statusAvailable
                       : payment.status === "Pendente"
-                        ? style.statusSold
-                        : style.statusAdopted
+                      ? style.statusSold
+                      : style.statusAdopted
                   }`}
                 >
                   {payment.status}
@@ -94,15 +107,21 @@ const PaymentsSection = () => {
               </td>
               <td className={style.tableCell}>{payment.data}</td>
               <td className={style.tableCell}>
-                <button className={`${style.actionButton} ${style.editButton}`}>👁️</button>
-                <button className={`${style.actionButton} ${style.deleteButton}`}>📄</button>
+                <button className={`${style.actionButton} ${style.editButton}`}>
+                  👁️
+                </button>
+                <button
+                  className={`${style.actionButton} ${style.deleteButton}`}
+                >
+                  📄
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-export default PaymentsSection
+export default PaymentsSection;

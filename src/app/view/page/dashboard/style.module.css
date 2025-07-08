@@ -21,7 +21,7 @@
 
 .header {
   height: 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #1c1c1c;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,6 +34,12 @@
 .headerTitle {
   font-size: 1.5rem;
   font-weight: 600;
+  background-color: white;
+  border-radius: 100%;
+  img {
+    width: 4rem;
+    height: 3.5rem;
+  }
 }
 
 .headerUser {
@@ -44,7 +50,7 @@
 
 .sidebar {
   width: 280px;
-  background-color: #2c3e50;
+  background-color: #1c1c11;
   padding: 1rem 0;
   margin: 1rem 0 1rem 1rem;
   border-radius: 12px;
@@ -68,13 +74,13 @@
 
 .sidebarItem:hover {
   background-color: #34495e;
-  color: #3498db;
+  color: #c1c1c1;
 }
 
 .sidebarItemActive {
-  background-color: #3498db;
+  background-color: #c1c1c1;
   color: white;
-  border-right: 4px solid #2980b9;
+  border-right: 4px solid #c1c1c1;
 }
 
 .section {
@@ -222,7 +228,7 @@
 }
 
 .statCard {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #1c1c1c;
   color: white;
   padding: 1.5rem;
   border-radius: 12px;
