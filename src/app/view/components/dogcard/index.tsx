@@ -5,14 +5,14 @@ import AppAssetsImages from "../../../res/app_assets_images";
 
 class DogCard extends Component<DogModel> {
   render() {
-    const { name, price, description, image, qualification, rating } =
+    const { name, price, description, photo, qualification, rating } =
       this.props;
 
     return (
       <div className={styles.dogCard}>
         <div
           className={styles.dogCardImage}
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${photo})` }}
         ></div>
 
         <div className={styles.dogCardHeader}>

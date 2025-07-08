@@ -1,11 +1,25 @@
 interface DogModel {
-    name: string,
-    price: number,
-    description: string,
-    image: string,
-    qualification: string,
-    rating: number
+  id: number;
+  name: string;
+  raceId: number;
+  birthDate: string;
+  sex: 'M' | 'F';
+  status: number;
+  commercialTypeId: number;
+  description: string;
+  photo: string;  
+  price: number;
+  dogSizeId: number;
+  created_at: string;
+  updated_at: string;
+  deleted_at: string | null;
+  
+  qualification?: string; 
+  rating?: number;       
 }
+export interface DogsResponse {
+   data: DogModel[];
 
-
+}
 export default DogModel;
+

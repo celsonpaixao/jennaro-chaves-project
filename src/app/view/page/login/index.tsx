@@ -3,8 +3,10 @@ import AppAssetsImages from "../../../res/app_assets_images";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { MdLockOutline } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={style.container}>
       <div className={style.leftSection}>
@@ -39,11 +41,14 @@ const Login = () => {
             Esqueci minha senha !
           </Link>
 
-          <button type="submit" className={style.submitButton}>
+          <button type="submit" className={style.submitButton} onClick={(e) => {
+            e.preventDefault();
+            navigate("/dashboard"); 
+          }}>
             Entrar <IoIosArrowRoundForward />
           </button>
           <Link to="/register" className={style.textInfocenter}>
-            Ainda não tenho uma !
+            Ainda não tenho uma ! Criar Conta
           </Link>
         </form>
       </div>
