@@ -208,38 +208,64 @@ const AnimalsSection = () => {
         </tbody>
       </table>
 
+      {/* Modal de Criação */}
+      {showModal && (
+        <div className={style.modal}>
+          <div className={style.modalContent}>
+            <h3 className={style.modalTitle}>Cadastrar Novo Animal</h3>
+            <CreateFormFields
+              data={formData}
+              onChange={(e) => handleInputChange(e)}
+            />
+            <div className={style.modalActions}>
+              <button
+                className={style.secondaryButton}
+                onClick={() => setShowModal(false)}
+              >
+                Cancelar
+              </button>
+              <button
+                className={style.primaryButton}
+                onClick={async () => {
+                  const dataToSend = {
+                    ...formData,
+                    birthDate: new Date(formData.birthDate).toISOString(),
+                  };
+
+                  await createDog(dataToSend);
+                  setShowModal(false);
+                  setFormData({
+                    name: "",
+                    birthDate: "",
+                    raceId: 0,
+                    description: "",
+                    commercialTypeId: 0,
+                    price: 0,
+                    status: 1,
+                    sex: "M",
+                    dogSizeId: 1,
+                  });
+                  fetchDogs();
+                }}
+              >
+                Criar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Modal de Edição */}
       {editModal && editFormData && (
         <div className={style.modal}>
           <div className={style.modalContent}>
             <h3 className={style.modalTitle}>Editar Animal</h3>
-            <div className={style.formGroup}>
-              <label className={style.formLabel}>Imagem</label>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageChange}
-                ref={imageInputRef}
-              />
-              {imagePreview ? (
-                <img
-                  src={imagePreview}
-                  alt="Preview"
-                  className={style.imagePreview}
-                />
-              ) : (
-                editFormData.imageUrl && (
-                  <img
-                    src={editFormData.imageUrl}
-                    alt="Imagem atual"
-                    className={style.imagePreview}
-                  />
-                )
-              )}
-            </div>
-            <FormFields
+            <EditFormFields
               data={editFormData}
               onChange={(e) => handleInputChange(e, true)}
+              imagePreview={imagePreview}
+              handleImageChange={handleImageChange}
+              imageInputRef={imageInputRef}
             />
             <div className={style.modalActions}>
               <button
@@ -278,7 +304,9 @@ const AnimalsSection = () => {
 
 export default AnimalsSection;
 
-const FormFields = ({
+// === Formulários Separados ===
+
+const CreateFormFields = ({
   data,
   onChange,
 }: {
@@ -360,5 +388,43 @@ const FormFields = ({
         onChange={onChange}
       ></textarea>
     </div>
+  </>
+);
+
+const EditFormFields = ({
+  data,
+  onChange,
+  imagePreview,
+  handleImageChange,
+  imageInputRef,
+}: {
+  data: DogModel;
+  onChange: (e: DogModel) => void;
+  imagePreview: string | null;
+  handleImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  imageInputRef: React.RefObject<HTMLInputElement>;
+}) => (
+  <>
+    <div className={style.formGroup}>
+      <label className={style.formLabel}>Imagem</label>
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+        ref={imageInputRef}
+      />
+      {imagePreview ? (
+        <img src={imagePreview} alt="Preview" className={style.imagePreview} />
+      ) : (
+        data.photo && (
+          <img
+            src={data.photo}
+            alt="Imagem atual"
+            className={style.imagePreview}
+          />
+        )
+      )}
+    </div>
+    <CreateFormFields data={data} onChange={onChange} />
   </>
 );
