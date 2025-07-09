@@ -1,0 +1,45 @@
+.faqCard {
+  width: 650px;
+  border-radius: 6px;
+  padding: 20px 16px;
+  background: #ffffff;
+  box-shadow: 0px 14px 20px 1px rgba(62, 157, 194, 0.178);
+  transition: all 0.3s ease-in-out;
+}
+
+.faqButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #374151;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.faqButton span {
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+}
+
+.faqAnswer.open {
+  max-height: 1000px;
+  opacity: 1;
+  padding-top: 10px;
+  color: #5f5f5f;
+}
