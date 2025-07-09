@@ -3,10 +3,10 @@ import Banner from "./components/banner";
 import Faqs from "./components/faqs";
 import FeedBack from "./components/feedback";
 import Footer from "./components/footer";
-import ForYou from "./components/foryou ";
+import ForYou from "./components/foryou";
 import Header from "./components/header";
 import MoreShoped from "./components/moreshopped";
-import Toadopt from "./components/toadopt ";
+import Toadopt from "./components/toadopt";
 import style from "./style.module.css";
 const Home = () => {
   return (
