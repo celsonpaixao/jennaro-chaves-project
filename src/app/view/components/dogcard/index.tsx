@@ -33,6 +33,20 @@ class DogCard extends Component<DogModel> {
             <img src={AppAssetsImages.qualitity_icon} alt="" />
           </div>
         </div>
+
+        {/* Botão "Contactar" que aparece no hover */}
+        <button
+          className={styles.contactButton}
+          onClick={() => {
+            const number = "244938149766";
+            const message = `Olá, tenho interesse no cão ${name} por ${price} kz. Ainda está disponível?`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${number}?text=${encodedMessage}`;
+            window.open(whatsappURL, "_blank");
+          }}
+        >
+          Contactar
+        </button>
       </div>
     );
   }

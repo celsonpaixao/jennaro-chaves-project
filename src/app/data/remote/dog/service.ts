@@ -1,4 +1,9 @@
-import DogModel, { DogsResponse, DogsRice } from "../../../model/dog_model";
+import DogModel, {
+  Client,
+  ClientsResponse,
+  DogsResponse,
+  DogsRice,
+} from "../../../model/dog_model";
 import { API_CONFIG } from "../api_configs";
 import axios from "axios";
 
@@ -155,6 +160,17 @@ export const DogService = {
       return response.data;
     } catch (error) {
       console.error(`Error updating dog ${data.id}:`, error);
+      throw error;
+    }
+  },
+  async getAllClients(): Promise<Client[]> {
+    try {
+      const response = await apiClient.get<ClientsResponse>(
+        API_CONFIG.endpoints.clients
+      );
+      return response.data.data;
+    } catch (error) {
+      console.error("Error fetching clients:", error);
       throw error;
     }
   },

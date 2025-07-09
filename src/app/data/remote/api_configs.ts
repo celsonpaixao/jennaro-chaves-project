@@ -6,5 +6,6 @@ export const API_CONFIG = {
   endpoints: {
     dogs: "/dogs/list",
     dogRaces: "/race/list/races",
+    clients: "/clients",
   },
 };

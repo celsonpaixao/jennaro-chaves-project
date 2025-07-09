@@ -33,7 +33,7 @@ const Toadopt = () => {
     <div className={style.container}>
       <SectionTitle
         fontSize="32px"
-        title="Cachorros para adotar "
+        title="Cachorros a Venda "
         lineWidth={400}
       />
       <button className={style.navButton} onClick={handlePrev}>

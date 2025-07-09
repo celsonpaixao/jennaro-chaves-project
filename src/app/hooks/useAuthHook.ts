@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSnackbarStore } from "../store/snackbarStore";
-import { AuthService } from "../data/remote/auth/service";
+import { AuthService, CreateClientDTO } from "../data/remote/auth/service";
 
 interface User {
   email: string;
@@ -25,6 +25,25 @@ export function useAuthHook() {
 
     setInitializing(false);
   }, []);
+
+  const registerClient = async (data: CreateClientDTO) => {
+    try {
+      setLoading(true);
+      await AuthService.registerClient(data);
+      showSnackbar("Cliente registrado com sucesso!", "success");
+    } catch (error) {
+      console.error("Erro ao registrar cliente:", error);
+      const errorMessage =
+        error instanceof Error
+          ? error.message
+          : "Erro inesperado ao registrar cliente.";
+
+      showSnackbar(errorMessage, "error");
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const login = async (email: string, password: string) => {
     try {
@@ -93,5 +112,6 @@ export function useAuthHook() {
     isAuthenticated,
     loading,
     initializing,
+    registerClient,
   };
 }
