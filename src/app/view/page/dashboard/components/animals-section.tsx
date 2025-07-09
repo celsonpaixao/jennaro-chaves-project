@@ -31,10 +31,12 @@ const AnimalsSection = () => {
   const [selectedImageFile, setSelectedImageFile] = useState<File | null>(null);
   const imageInputRef = useRef<HTMLInputElement | null>(null);
 
-  const { createDog, deleteDog, updateDog, uploadImage } = useDogHook();
+  const { createDog, deleteDog, updateDog, uploadImage, fetchDogRaces, races } =
+    useDogHook();
 
   useEffect(() => {
     fetchDogs();
+    fetchDogRaces();
   }, []);
 
   const fetchDogs = async () => {
@@ -216,7 +218,9 @@ const AnimalsSection = () => {
             <CreateFormFields
               data={formData}
               onChange={(e) => handleInputChange(e)}
+              races={races}
             />
+
             <div className={style.modalActions}>
               <button
                 className={style.secondaryButton}
@@ -266,7 +270,9 @@ const AnimalsSection = () => {
               imagePreview={imagePreview}
               handleImageChange={handleImageChange}
               imageInputRef={imageInputRef}
+              races={races}
             />
+
             <div className={style.modalActions}>
               <button
                 className={style.secondaryButton}
@@ -305,13 +311,14 @@ const AnimalsSection = () => {
 export default AnimalsSection;
 
 // === Formulários Separados ===
-
 const CreateFormFields = ({
   data,
   onChange,
+  races,
 }: {
   data: any;
   onChange: (e: any) => void;
+  races: { id: number; name: string }[];
 }) => (
   <>
     <div className={style.formGroup}>
@@ -336,13 +343,19 @@ const CreateFormFields = ({
     </div>
     <div className={style.formGroup}>
       <label className={style.formLabel}>Raça</label>
-      <input
-        type="number"
+      <select
         name="raceId"
         className={style.formInput}
         value={data.raceId}
         onChange={onChange}
-      />
+      >
+        <option value="">Selecione uma raça</option>
+        {races.map((race) => (
+          <option key={race.id} value={race.id}>
+            {race.name}
+          </option>
+        ))}
+      </select>
     </div>
     <div className={style.formGroup}>
       <label className={style.formLabel}>Tipo</label>
@@ -397,12 +410,14 @@ const EditFormFields = ({
   imagePreview,
   handleImageChange,
   imageInputRef,
+  races,
 }: {
   data: DogModel;
-  onChange: (e: DogModel) => void;
+  onChange: (e: any) => void;
   imagePreview: string | null;
   handleImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   imageInputRef: React.RefObject<HTMLInputElement>;
+  races: { id: number; name: string }[];
 }) => (
   <>
     <div className={style.formGroup}>
@@ -425,6 +440,6 @@ const EditFormFields = ({
         )
       )}
     </div>
-    <CreateFormFields data={data} onChange={onChange} />
+    <CreateFormFields data={data} onChange={onChange} races={races} />
   </>
 );

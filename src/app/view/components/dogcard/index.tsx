@@ -2,7 +2,6 @@ import { Component } from "react";
 import DogModel from "../../../model/dog_model";
 import styles from "./syule.module.css";
 import AppAssetsImages from "../../../res/app_assets_images";
-import { baseUrl } from "../../../res/app_constants";
 
 class DogCard extends Component<DogModel> {
   render() {
@@ -13,7 +12,7 @@ class DogCard extends Component<DogModel> {
       <div className={styles.dogCard}>
         <div
           className={styles.dogCardImage}
-          style={{ backgroundImage: `url($${baseUrl}/${photo})` }}
+          style={{ backgroundImage: `url(${photo})` }}
         ></div>
 
         <div className={styles.dogCardHeader}>

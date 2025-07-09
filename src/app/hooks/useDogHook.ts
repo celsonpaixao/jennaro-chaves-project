@@ -1,12 +1,26 @@
 import { useSnackbarStore } from "../store/snackbarStore";
 import { useState, useCallback } from "react";
 import { CreateDogRequest, DogService } from "../data/remote/dog/service";
-import DogModel from "../model/dog_model";
+import DogModel, { DogsRice } from "../model/dog_model";
 
 export function useDogHook() {
   const [dogs, setDogs] = useState<DogModel[]>([]);
   const [loading, setLoading] = useState(false);
   const { showSnackbar } = useSnackbarStore();
+  const [races, setRaces] = useState<DogsRice[]>([]);
+
+  const fetchDogRaces = useCallback(async () => {
+    setLoading(true);
+    try {
+      const response = await DogService.getDogRaces();
+      setRaces(response);
+    } catch (error) {
+      showSnackbar("Erro ao buscar raças", "error");
+      console.error("Erro ao buscar raças:", error);
+    } finally {
+      setLoading(false);
+    }
+  }, [showSnackbar]);
 
   const fetchDogs = useCallback(async () => {
     setLoading(true);
@@ -91,5 +105,7 @@ export function useDogHook() {
     loading,
     updateDog,
     uploadImage,
+    fetchDogRaces,
+    races,
   };
 }

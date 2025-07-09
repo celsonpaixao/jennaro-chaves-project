@@ -5,5 +5,6 @@ export const API_CONFIG = {
   timeout: 10000,
   endpoints: {
     dogs: "/dogs/list",
+    dogRaces: "/race/list/races",
   },
 };

@@ -1,4 +1,4 @@
-import DogModel, { DogsResponse } from "../../../model/dog_model";
+import DogModel, { DogsResponse, DogsRice } from "../../../model/dog_model";
 import { API_CONFIG } from "../api_configs";
 import axios from "axios";
 
@@ -115,6 +115,18 @@ export const DogService = {
       throw error;
     }
   },
+  async getDogRaces(): Promise<DogsRice[]> {
+    try {
+      const response = await apiClient.get<DogsRice[]>(
+        API_CONFIG.endpoints.dogRaces
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching dog races:", error);
+      throw error;
+    }
+  },
+
   async uploadDogImage(id: number, image: File): Promise<any> {
     try {
       const formData = new FormData();

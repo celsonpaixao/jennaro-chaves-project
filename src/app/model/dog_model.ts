@@ -21,5 +21,10 @@ export interface DogsResponse {
    data: DogModel[];
 
 }
+
+export interface DogsRice {
+  id: number,
+  name: string
+}
 export default DogModel;
 
