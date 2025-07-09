@@ -1,4 +1,4 @@
-import TouchOfHappiness from "./components/ touchoOfhappiness";
+import TouchOfHappiness from "./components/touchoOfhappiness";
 import Banner from "./components/banner";
 import Faqs from "./components/faqs";
 import FeedBack from "./components/feedback";
